@@ -7,13 +7,27 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.89" :scope "provided"]
                  [com.cognitect/transit-clj "0.8.285"]
-                 [ring "1.4.0"]
+                 [ring "1.5.0"]
+                 [ring/ring-defaults "0.2.1"]
+                 [ring/ring-json "0.4.0"]
+                 [ring/ring-mock "0.3.0"]
+                 [ring/ring-codec "1.0.1"]
                  [ring/ring-defaults "0.2.0"]
                  [bk/ring-gzip "0.1.1"]
                  [ring.middleware.logger "0.5.0"]
                  [compojure "1.5.0"]
                  [environ "1.0.3"]
-                 [org.omcljs/om "1.0.0-alpha36"]]
+                 [org.clojure/java.jdbc "0.4.1"]
+                 [org.postgresql/postgresql "9.4-1201-jdbc41"]
+                 [honeysql "0.6.3"]
+
+                 ;; cljs
+                 [org.clojure/clojurescript "1.9.89" :scope "provided"]
+                 [org.clojure/core.async "0.2.374"
+                  :exclusions [org.clojure/tools.reader]]
+                 [rum "0.10.5"]
+                 [cljs-ajax "0.5.4"]
+                 ]
 
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-environ "1.0.3"]]
@@ -72,7 +86,7 @@
   ;; not be picked up, instead configure figwheel here on the top level.
 
   :figwheel {;; :http-server-root "public"       ;; serve static assets from resources/public/
-             ;; :server-port 3449                ;; default
+              :server-port 3451                ;; default
              ;; :server-ip "127.0.0.1"           ;; default
              :css-dirs ["resources/public/css"]  ;; watch and update CSS
 
