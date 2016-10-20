@@ -20,6 +20,7 @@
                  [org.clojure/java.jdbc "0.4.1"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]
                  [honeysql "0.6.3"]
+                 [clj-time "0.12.0"]
 
                  ;; cljs
                  [org.clojure/clojurescript "1.9.89" :scope "provided"]

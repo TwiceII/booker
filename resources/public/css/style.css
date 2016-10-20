@@ -1,3 +1,20 @@
 h1 {
   text-decoration: underline;
 }
+
+
+.op-date {
+  font-style: italic;
+}
+
+.op-account {
+  font-weight: bold;
+}
+
+.op-category {
+  text-decoration: underline;
+}
+
+.op-summ {
+
+}
